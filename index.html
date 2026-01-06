@@ -1,208 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <!-- ================= SEO / ATS ================= -->
-  <title>Sneha George | Senior Data Engineer | AWS | UK</title>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="Senior Data Engineer with 7+ years experience in AWS, data platforms, ETL pipelines and cloud-native analytics. MSc Data Science (Distinction). Actively seeking UK roles.">
+  <title>Sneha George Gnanakalavathy | Senior Data Engineer & Data Scientist | UK</title>
 
-  <meta name="keywords"
-        content="Senior Data Engineer UK, AWS Data Engineer, Cloud Data Engineer, ETL, Data Pipelines, Snowflake, Spark, Kafka, MSc Data Science">
-
+  <!-- SEO / ATS -->
+  <meta name="description" content="Senior Data Engineer with 7+ years experience. MSc Data Science (Distinction). AWS, Spark, ML, NLP, Healthcare analytics. UK-based.">
+  <meta name="keywords" content="Senior Data Engineer UK, Data Scientist UK, AWS, Spark, Kafka, Machine Learning, NLP">
   <meta name="author" content="Sneha George Gnanakalavathy">
 
-  <!-- Open Graph (LinkedIn preview) -->
-  <meta property="og:title" content="Sneha George | Senior Data Engineer">
-  <meta property="og:description" content="AWS-certified Senior Data Engineer with MSc Data Science. UK-based.">
-  <meta property="og:type" content="website">
-
-  <!-- ================= STYLES ================= -->
   <style>
     :root {
-      --bg-main: #0d1117;
-      --bg-card: #161b22;
-      --bg-soft: #1f2937;
-      --text-main: #e6edf3;
-      --text-muted: #9ca3af;
-      --accent: #8b5cf6;
-      --border: #30363d;
+      --bg-main:#0d1117; --bg-card:#161b22; --bg-soft:#1f2937;
+      --text-main:#e6edf3; --text-muted:#9ca3af;
+      --accent:#8b5cf6; --border:#30363d;
     }
-
     [data-theme="light"] {
-      --bg-main: #f9fafb;
-      --bg-card: #ffffff;
-      --bg-soft: #f3f4f6;
-      --text-main: #111827;
-      --text-muted: #4b5563;
-      --accent: #6366f1;
-      --border: #e5e7eb;
+      --bg-main:#f9fafb; --bg-card:#fff; --bg-soft:#f3f4f6;
+      --text-main:#111827; --text-muted:#4b5563;
+      --accent:#6366f1; --border:#e5e7eb;
     }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Segoe UI,Roboto;background:var(--bg-main);color:var(--text-main);line-height:1.6}
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    nav{position:sticky;top:0;background:var(--bg-card);border-bottom:1px solid var(--border);z-index:999}
+    .nav-container{max-width:1200px;margin:auto;display:flex;justify-content:space-between;padding:15px}
+    .nav-links a{margin-right:15px;color:var(--text-muted);text-decoration:none}
+    .nav-links a:hover{color:var(--accent)}
+    .toggle-btn{border:1px solid var(--border);background:var(--bg-soft);padding:6px 14px;border-radius:20px;cursor:pointer}
 
-    html { scroll-behavior: smooth; }
+    .container{max-width:1200px;margin:auto;padding:20px}
+    header,.section{background:var(--bg-card);padding:40px;margin-bottom:30px;border-radius:14px;border:1px solid var(--border)}
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, sans-serif;
-      background: var(--bg-main);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
+    .profile{display:flex;gap:30px;flex-wrap:wrap;align-items:center}
+    .profile img{width:160px;height:160px;border-radius:50%;border:3px solid var(--accent)}
+    h1{font-size:2.5em;color:var(--accent)}
+    h2{border-left:5px solid var(--accent);padding-left:15px;margin-bottom:20px}
+    p,li{color:var(--text-muted)}
 
-    /* ================= NAV ================= */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border);
-    }
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px}
+    .project-card{background:var(--bg-soft);padding:25px;border-radius:12px;border:1px solid var(--border)}
+    .project-card img{width:100%;border-radius:10px;margin-bottom:15px}
 
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    .tags span{background:var(--accent);color:#fff;padding:4px 10px;border-radius:12px;font-size:.8em;margin-right:5px}
+    .links a{color:var(--accent);margin-right:15px;text-decoration:none}
 
-    .nav-links a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    .toggle-btn {
-      cursor: pointer;
-      border: 1px solid var(--border);
-      background: var(--bg-soft);
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.9em;
-    }
-
-    /* ================= LAYOUT ================= */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    header, .section {
-      background: var(--bg-card);
-      border-radius: 14px;
-      padding: 40px;
-      margin-bottom: 30px;
-      border: 1px solid var(--border);
-    }
-
-    .profile-section {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .profile-img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--accent);
-    }
-
-    h1 {
-      font-size: 2.6em;
-      color: var(--accent);
-    }
-
-    h2 {
-      font-size: 2em;
-      margin-bottom: 25px;
-      border-left: 5px solid var(--accent);
-      padding-left: 15px;
-    }
-
-    .tagline {
-      font-size: 1.2em;
-      color: var(--text-muted);
-      margin: 10px 0 20px;
-    }
-
-    .contact-links a {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px 18px;
-      background: var(--bg-soft);
-      color: var(--text-main);
-      text-decoration: none;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-    }
-
-    .projects-grid, .achievements {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .project-card, .achievement-card {
-      background: var(--bg-soft);
-      padding: 25px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-    }
-
-    .tech-tag {
-      background: var(--accent);
-      color: white;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-size: .8em;
-      margin-right: 5px;
-    }
-
-    .highlight {
-      background: rgba(99,102,241,.15);
-      padding: 20px;
-      border-left: 4px solid var(--accent);
-      border-radius: 10px;
-      margin: 20px 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: var(--text-muted);
-    }
-
-    @media (max-width: 768px) {
-      .profile-section { flex-direction: column; text-align: center; }
-    }
+    footer{text-align:center;color:var(--text-muted);padding:40px}
   </style>
 </head>
 
 <body>
 
-<!-- ================= NAV ================= -->
 <nav>
   <div class="nav-container">
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#de-projects">Data Engineering</a>
-      <a href="#ds-projects">Data Science</a>
+      <a href="#de">Data Engineering</a>
+      <a href="#ds">Data Science</a>
       <a href="#experience">Experience</a>
-      <a href="#certs">Certifications</a>
     </div>
     <button class="toggle-btn" onclick="toggleTheme()">🌙 / ☀️</button>
   </div>
@@ -211,103 +69,104 @@
 <div class="container">
 
 <header id="about">
-  <div class="profile-section">
-    <img src="images/profile.jpg" alt="Sneha George - Senior Data Engineer" class="profile-img">
+  <div class="profile">
+    <img src="images/profile.jpg" alt="Sneha George">
     <div>
       <h1>Sneha George Gnanakalavathy</h1>
-      <p class="tagline">Senior Data Engineer | AWS Certified | MSc Data Science</p>
-
-      <div class="contact-links">
-        <a href="https://github.com/SnehaGeorge22" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/sneha-gg" target="_blank">LinkedIn</a>
-        <a href="mailto:sneha.g220691@gmail.com">Email</a>
-        <a href="tel:+447379473208">UK: +44 7379 473208</a>
-      </div>
+      <p>Senior Data Engineer | AWS Certified | MSc Data Science (Distinction)</p>
     </div>
   </div>
 </header>
 
-<section class="section">
-  <h2>About Me</h2>
-  <p>
-    Senior Data Engineer with 7+ years of experience delivering cloud-native data platforms, ETL pipelines,
-    and analytics solutions using AWS, Spark, Snowflake and Kafka.
-  </p>
-  <p>
-    MSc Data Science (Distinction), University of Exeter. Strong experience in healthcare and enterprise data systems.
-    Actively seeking Senior Data Engineer roles in the UK.
-  </p>
-</section>
+<!-- ================= DATA SCIENCE PROJECTS ================= -->
+<section class="section" id="ds">
+  <h2>📊 Data Science & Machine Learning Projects</h2>
 
-<section class="section" id="de-projects">
-  <h2>Data Engineering Projects</h2>
-  <div class="projects-grid">
-    <div class="project-card">
-      <h3>GameVerse Analytics Lakehouse</h3>
-      <p>AWS-based Delta Lake platform processing 1M+ events daily.</p>
-      <span class="tech-tag">AWS</span><span class="tech-tag">Spark</span>
-    </div>
-  </div>
-</section>
+  <div class="projects">
 
-<section class="section" id="ds-projects">
-  <h2>Data Science & ML Projects</h2>
-  <div class="projects-grid">
+    <!-- Capri-CT -->
     <div class="project-card">
-      <h3>Capri-CT (Medical Imaging ML)</h3>
-      <p>Causal deep learning framework for CT image quality optimisation.</p>
+      <img src="images/capri_ct_pipeline.png" alt="Capri-CT ML pipeline">
+
+      <h3>CAPRI-CT: Causal Deep Learning for CT Image Quality</h3>
+      <p>
+        Research-focused ML pipeline investigating causal relationships in CT image reconstruction
+        using Variational Autoencoders and ensemble modelling. Developed as part of MSc Data Science.
+      </p>
+
+      <ul>
+        <li>Designed end-to-end ML pipeline for medical imaging data</li>
+        <li>Implemented VAEs to analyse causal effects on image quality</li>
+        <li>Applied ensemble learning for robustness and validation</li>
+        <li>Aligned model outputs with clinical safety constraints</li>
+      </ul>
+
+      <div class="tags">
+        <span>Python</span><span>Deep Learning</span><span>TensorFlow</span><span>MLOps</span>
+      </div>
+
+      <div class="links">
+        <a href="https://github.com/your-username/capri-ct" target="_blank">GitHub</a>
+        <a href="https://arxiv.org/abs/2507.17420v1" target="_blank">Paper</a>
+      </div>
     </div>
+
+    <!-- Game of Thrones -->
+    <div class="project-card">
+      <img src="images/got_network.png" alt="Game of Thrones network analysis">
+
+      <h3>Power Dynamics in Game of Thrones using NLP & Network Analysis</h3>
+      <p>
+        Analytical study of power evolution in <em>Game of Thrones</em> using character interaction
+        networks and sentiment analysis of dialogue, inspired by Foucault’s theory of power.
+      </p>
+
+      <ul>
+        <li>Built signed and conflict-based character networks</li>
+        <li>Performed sentiment analysis using VADER and manual annotation</li>
+        <li>Applied N-gram analysis to thematic phrases</li>
+        <li>Computed centrality metrics to quantify influence</li>
+        <li>Visualised networks using Gephi</li>
+      </ul>
+
+      <div class="tags">
+        <span>Python</span><span>NLP</span><span>Network Analysis</span><span>Data Visualisation</span>
+      </div>
+
+      <div class="links">
+        <a href="https://github.com/your-username/got-network-analysis" target="_blank">GitHub</a>
+        <a href="#" target="_blank">Report</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <section class="section" id="experience">
-  <h2>Professional Experience</h2>
-  <div class="highlight">
-    Accenture (2017–2024) — Associate Manager, Data Engineering (Client: Cigna Healthcare)
-  </div>
+  <h2>💼 Professional Experience</h2>
+  <p><strong>Accenture (2017–2024)</strong> — Associate Manager, Data Engineering</p>
   <ul>
-    <li>Reduced AWS costs by 40% while maintaining 99.9% uptime</li>
-    <li>Led migrations serving 250+ providers</li>
+    <li>Reduced AWS infrastructure costs by 40%</li>
+    <li>Led migrations serving 250+ healthcare providers</li>
+    <li>Mentored junior engineers and reviewed architectures</li>
   </ul>
-</section>
-
-<section class="section" id="certs">
-  <h2>Certifications</h2>
-  <ul>
-    <li>AWS Certified Data Analytics – Specialty</li>
-    <li>AWS Solutions Architect – Associate</li>
-    <li>Databricks Data Engineer Associate</li>
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Achievements & Leadership</h2>
-  <div class="achievements">
-    <div class="achievement-card">🎓 MSc Data Science – Distinction</div>
-    <div class="achievement-card">⭐ Employee of the Quarter</div>
-    <div class="achievement-card">👥 Team Lead & Mentor</div>
-  </div>
 </section>
 
 </div>
 
 <footer>
-  © 2026 Sneha George Gnanakalavathy | Senior Data Engineer (UK)
+  © 2026 Sneha George Gnanakalavathy | UK
 </footer>
 
-<!-- ================= THEME TOGGLE ================= -->
 <script>
   const root = document.documentElement;
-
-  function toggleTheme() {
-    const current = root.getAttribute("data-theme");
-    const next = current === "light" ? "dark" : "light";
-    root.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
+  function toggleTheme(){
+    const t=root.getAttribute("data-theme")==="light"?"dark":"light";
+    root.setAttribute("data-theme",t);
+    localStorage.setItem("theme",t);
   }
-
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) root.setAttribute("data-theme", savedTheme);
+  const saved=localStorage.getItem("theme");
+  if(saved)root.setAttribute("data-theme",saved);
 </script>
 
 </body>
