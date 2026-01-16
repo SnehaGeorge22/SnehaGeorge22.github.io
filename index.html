@@ -48,11 +48,11 @@
         
         body.light-mode {
             background-color: #f5f5f5;
-            color: #333;
+            color: #1a1a1a;
         }
         
         body.light-mode section {
-            color: #333;
+            color: #1a1a1a;
         }
         
         body.light-mode .about-text p,
@@ -60,10 +60,16 @@
         body.light-mode .experience-description ul,
         body.light-mode .skill-category li,
         body.light-mode .education-details,
+        body.light-mode .education-details p,
         body.light-mode .education-achievements li,
         body.light-mode .interest-card p,
-        body.light-mode .testimonial-quote {
-            color: #555;
+        body.light-mode .testimonial-quote,
+        body.light-mode .leadership-item p,
+        body.light-mode .experience-company,
+        body.light-mode .stat-label,
+        body.light-mode .cert-date,
+        body.light-mode .testimonial-info p {
+            color: #333;
         }
         
         body.light-mode h2,
@@ -71,8 +77,20 @@
         body.light-mode .education-header h3,
         body.light-mode .cert-card h3,
         body.light-mode .interest-card h3,
-        body.light-mode .testimonial-info h4 {
-            color: #333;
+        body.light-mode .testimonial-info h4,
+        body.light-mode .skill-category h3,
+        body.light-mode .leadership-section h3,
+        body.light-mode .leadership-item h4,
+        body.light-mode .education-institution,
+        body.light-mode .highlight-box h3,
+        body.light-mode .highlight-list li {
+            color: #1a1a1a;
+        }
+        
+        body.light-mode nav ul li a,
+        body.light-mode footer,
+        body.light-mode footer p {
+            color: #1a1a1a;
         }
         
         body.light-mode section {
@@ -1442,47 +1460,7 @@
                 </div>
             </div>
         </section>
-        
-        <section id="education">
-            <h2>Education & Milestones</h2>
-            <div class="education-item">
-                <div class="education-header">
-                    <h3>Master of Science (MSc) in Data Science</h3>
-                    <span class="education-date">2023 - 2024</span>
-                </div>
-                <div class="education-institution">UK University Name</div>
-                <div class="education-details">
-                    <p>Specialized in Machine Learning, Big Data Analytics, and Statistical Modeling. Completed advanced coursework in Deep Learning, Natural Language Processing, and Cloud Computing.</p>
-                </div>
-                <div class="education-achievements">
-                    <strong style="color: #8b45ff;">Key Achievements:</strong>
-                    <ul>
-                        <li>Graduated with Distinction (Merit/Distinction - adjust as needed)</li>
-                        <li>Dissertation: "Scalable ML Pipeline Architecture for Real-Time Predictions"</li>
-                        <li>Led study group of 8 students for advanced statistics coursework</li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="education-item">
-                <div class="education-header">
-                    <h3>Bachelor of Technology/Engineering (Adjust as needed)</h3>
-                    <span class="education-date">2010 - 2014</span>
-                </div>
-                <div class="education-institution">University Name, Country</div>
-                <div class="education-details">
-                    <p>Foundation in Computer Science and Engineering principles. Strong focus on algorithms, data structures, and software engineering.</p>
-                </div>
-                <div class="education-achievements">
-                    <strong style="color: #8b45ff;">Key Achievements:</strong>
-                    <ul>
-                        <li>First Class Honours / GPA 3.8/4.0 (adjust as needed)</li>
-                        <li>President of Computer Science Society (2013-2014)</li>
-                        <li>Winner of University Hackathon - Built predictive analytics dashboard</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
         <section id="testimonials">
             <h2>Testimonials</h2>
             <div class="testimonials-grid">
@@ -1527,7 +1505,48 @@
             </div>
         </section>
 
-        <section id="interests">
+        <section id="education">
+            <h2>Education & Milestones</h2>
+            <div class="education-item">
+                <div class="education-header">
+                    <h3>Master of Science (MSc) in Data Science</h3>
+                    <span class="education-date">2023 - 2024</span>
+                </div>
+                <div class="education-institution">UK University Name</div>
+                <div class="education-details">
+                    <p>Specialized in Machine Learning, Big Data Analytics, and Statistical Modeling. Completed advanced coursework in Deep Learning, Natural Language Processing, and Cloud Computing.</p>
+                </div>
+                <div class="education-achievements">
+                    <strong style="color: #8b45ff;">Key Achievements:</strong>
+                    <ul>
+                        <li>Graduated with Distinction (Merit/Distinction - adjust as needed)</li>
+                        <li>Dissertation: "Scalable ML Pipeline Architecture for Real-Time Predictions"</li>
+                        <li>Led study group of 8 students for advanced statistics coursework</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <h3>Bachelor of Technology/Engineering (Adjust as needed)</h3>
+                    <span class="education-date">2010 - 2014</span>
+                </div>
+                <div class="education-institution">University Name, Country</div>
+                <div class="education-details">
+                    <p>Foundation in Computer Science and Engineering principles. Strong focus on algorithms, data structures, and software engineering.</p>
+                </div>
+                <div class="education-achievements">
+                    <strong style="color: #8b45ff;">Key Achievements:</strong>
+                    <ul>
+                        <li>First Class Honours / GPA 3.8/4.0 (adjust as needed)</li>
+                        <li>President of Computer Science Society (2013-2014)</li>
+                        <li>Winner of University Hackathon - Built predictive analytics dashboard</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
             <h2>Personal Interests</h2>
             <div class="interests-grid">
                 <div class="interest-card">
