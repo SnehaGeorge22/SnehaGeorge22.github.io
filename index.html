@@ -25,11 +25,40 @@
         }
 
         header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: 
+                linear-gradient(135deg, rgba(139, 69, 255, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%),
+                radial-gradient(circle at 20% 50%, rgba(139, 69, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(255, 107, 107, 0.2) 0%, transparent 50%),
+                #0f0f1e;
             color: white;
             padding: 60px 0;
             text-align: center;
-            border-bottom: 3px solid #00d4ff;
+            border-bottom: 3px solid #8b45ff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(139, 69, 255, 0.03) 2px,
+                rgba(139, 69, 255, 0.03) 4px
+            );
+            animation: gridMove 20s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
         }
 
         .header-content {
@@ -43,15 +72,17 @@
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            border: 5px solid #00d4ff;
+            border: 5px solid #8b45ff;
             object-fit: cover;
-            background-color: #2a2a3e;
+            background: linear-gradient(135deg, #8b45ff 0%, #ff6b6b 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #00d4ff;
+            color: white;
             font-size: 3em;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 0 40px rgba(139, 69, 255, 0.5), 0 0 80px rgba(255, 107, 107, 0.3);
+            position: relative;
+            z-index: 1;
         }
 
         header h1 {
@@ -70,16 +101,17 @@
         }
 
         .contact-links a {
-            color: #00d4ff;
+            color: #ff6b6b;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1em;
             border-bottom: 2px solid transparent;
-            transition: border-bottom 0.3s;
+            transition: all 0.3s;
         }
 
         .contact-links a:hover {
-            border-bottom: 2px solid #00d4ff;
+            border-bottom: 2px solid #ff6b6b;
+            color: #8b45ff;
         }
 
         nav {
@@ -109,7 +141,7 @@
         }
 
         nav ul li a:hover {
-            color: #00d4ff;
+            color: #8b45ff;
         }
 
         section {
@@ -122,10 +154,11 @@
         }
 
         h2 {
-            color: #00d4ff;
+            color: #8b45ff;
             margin-bottom: 20px;
             font-size: 2em;
-            border-bottom: 3px solid #00d4ff;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(90deg, #8b45ff 0%, #ff6b6b 100%) 1;
             padding-bottom: 10px;
         }
 
@@ -155,11 +188,17 @@
             background: #1a1a1a;
             padding: 20px;
             border-radius: 5px;
-            border-left: 4px solid #00d4ff;
+            border-left: 4px solid #8b45ff;
+            transition: all 0.3s;
+        }
+        
+        .skill-category:hover {
+            border-left-color: #ff6b6b;
+            transform: translateX(5px);
         }
 
         .skill-category h3 {
-            color: #00d4ff;
+            color: #8b45ff;
             margin-bottom: 10px;
         }
 
@@ -174,7 +213,7 @@
 
         .skill-category li:before {
             content: "▹ ";
-            color: #00d4ff;
+            color: #ff6b6b;
             font-weight: bold;
         }
 
@@ -195,15 +234,15 @@
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
-            border-color: #00d4ff;
+            box-shadow: 0 5px 30px rgba(139, 69, 255, 0.4), 0 10px 60px rgba(255, 107, 107, 0.2);
+            border-color: #8b45ff;
         }
 
         .project-header {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: white;
             padding: 20px;
-            border-bottom: 2px solid #00d4ff;
+            border-bottom: 2px solid #8b45ff;
         }
 
         .project-header h3 {
@@ -213,7 +252,7 @@
 
         .project-type {
             font-size: 0.9em;
-            color: #00d4ff;
+            color: #ff6b6b;
         }
 
         .project-body {
@@ -233,8 +272,8 @@
         }
 
         .tech-tag {
-            background: #00d4ff;
-            color: #0a0a0a;
+            background: linear-gradient(135deg, #8b45ff 0%, #ff6b6b 100%);
+            color: white;
             padding: 5px 12px;
             border-radius: 15px;
             font-size: 0.85em;
@@ -246,13 +285,15 @@
         }
 
         .project-links a {
-            color: #00d4ff;
+            color: #8b45ff;
             text-decoration: none;
             margin-right: 15px;
             font-weight: 500;
+            transition: color 0.3s;
         }
 
         .project-links a:hover {
+            color: #ff6b6b;
             text-decoration: underline;
         }
 
@@ -279,7 +320,7 @@
         }
 
         .experience-date {
-            color: #00d4ff;
+            color: #ff6b6b;
             font-weight: 500;
         }
 
@@ -309,7 +350,13 @@
             background: #1a1a1a;
             padding: 20px;
             border-radius: 5px;
-            border-left: 4px solid #00d4ff;
+            border-left: 4px solid #8b45ff;
+            transition: all 0.3s;
+        }
+        
+        .cert-card:hover {
+            border-left-color: #ff6b6b;
+            transform: translateX(5px);
         }
 
         .cert-card h3 {
@@ -318,7 +365,7 @@
         }
 
         .cert-issuer {
-            color: #00d4ff;
+            color: #8b45ff;
             font-weight: 500;
         }
 
