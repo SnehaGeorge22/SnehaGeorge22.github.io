@@ -3,7 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Data Engineer & Data Scientist</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Your Name - Data Engineer & Data Scientist | UK Portfolio</title>
+    <meta name="description" content="Experienced Data Engineer & Data Scientist with 7+ years expertise in AWS, Databricks, Python. MSc Data Science graduate seeking opportunities in the UK.">
+    <meta name="keywords" content="Data Engineer, Data Scientist, AWS, Databricks, Python, Machine Learning, UK, London, Portfolio">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Your Name - Data Engineer & Data Scientist Portfolio">
+    <meta property="og:description" content="7+ years experience in Data Engineering & Data Science. Specialized in AWS, Databricks, Python, Machine Learning.">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/preview-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Name - Data Engineer & Data Scientist">
+    <meta name="twitter:description" content="7+ years experience in Data Engineering & Data Science">
+    
+    <!-- Analytics - Google Analytics (Replace YOUR_GA_ID with your actual tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_ID');
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -16,6 +43,94 @@
             line-height: 1.6;
             color: #e0e0e0;
             background-color: #0a0a0a;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        body.light-mode {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        body.light-mode section {
+            color: #333;
+        }
+        
+        body.light-mode .about-text p,
+        body.light-mode .project-body p,
+        body.light-mode .experience-description ul,
+        body.light-mode .skill-category li,
+        body.light-mode .education-details,
+        body.light-mode .education-achievements li,
+        body.light-mode .interest-card p,
+        body.light-mode .testimonial-quote {
+            color: #555;
+        }
+        
+        body.light-mode h2,
+        body.light-mode .experience-header h3,
+        body.light-mode .education-header h3,
+        body.light-mode .cert-card h3,
+        body.light-mode .interest-card h3,
+        body.light-mode .testimonial-info h4 {
+            color: #333;
+        }
+        
+        body.light-mode section {
+            background: white;
+            border: 1px solid #e0e0e0;
+        }
+        
+        body.light-mode #about {
+            background: linear-gradient(135deg, #ffffff 0%, rgba(139, 69, 255, 0.08) 100%);
+        }
+        
+        body.light-mode #skills {
+            background: linear-gradient(135deg, #ffffff 0%, rgba(255, 107, 107, 0.08) 100%);
+        }
+        
+        body.light-mode #certifications {
+            background: linear-gradient(135deg, rgba(139, 69, 255, 0.08) 0%, #ffffff 100%);
+        }
+        
+        body.light-mode #projects {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.08) 0%, #ffffff 100%);
+        }
+        
+        body.light-mode #experience {
+            background: linear-gradient(135deg, #ffffff 0%, rgba(139, 69, 255, 0.08) 100%);
+        }
+        
+        body.light-mode #education {
+            background: linear-gradient(135deg, #ffffff 0%, rgba(255, 107, 107, 0.08) 100%);
+        }
+        
+        body.light-mode #interests {
+            background: linear-gradient(135deg, rgba(139, 69, 255, 0.08) 0%, rgba(255, 107, 107, 0.08) 100%);
+        }
+        
+        body.light-mode #testimonials {
+            background: linear-gradient(135deg, #ffffff 0%, rgba(139, 69, 255, 0.08) 100%);
+        }
+        
+        body.light-mode .project-card,
+        body.light-mode .skill-category,
+        body.light-mode .cert-card,
+        body.light-mode .education-item,
+        body.light-mode .interest-card,
+        body.light-mode .testimonial-card,
+        body.light-mode .tech-badge {
+            background: #fafafa;
+            border-color: #e0e0e0;
+        }
+        
+        body.light-mode nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        body.light-mode footer {
+            background: #ffffff;
+            border-top: 1px solid #e0e0e0;
         }
 
         .container {
@@ -72,7 +187,7 @@
         .floating-icon {
             position: absolute;
             font-size: 3em;
-            opacity: 0.1;
+            opacity: 0.3;
             animation: float 6s ease-in-out infinite;
         }
         
@@ -724,6 +839,177 @@
             color: #888;
             font-size: 0.9em;
         }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .testimonial-card {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #8b45ff;
+            position: relative;
+        }
+        
+        .testimonial-quote {
+            color: #b0b0b0;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+        
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 3em;
+            color: #8b45ff;
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #2a2a2a;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8b45ff 0%, #ff6b6b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .testimonial-info h4 {
+            color: #e0e0e0;
+            font-size: 1em;
+            margin-bottom: 3px;
+        }
+        
+        .testimonial-info p {
+            color: #888;
+            font-size: 0.85em;
+        }
+        
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(139, 69, 255, 0.05);
+            border-radius: 8px;
+        }
+        
+        .tech-badge {
+            background: #1a1a1a;
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid #2a2a2a;
+            transition: all 0.3s;
+        }
+        
+        .tech-badge:hover {
+            border-color: #8b45ff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(139, 69, 255, 0.3);
+        }
+        
+        .tech-badge img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .tech-badge span {
+            color: #e0e0e0;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #8b45ff 0%, #ff6b6b 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(139, 69, 255, 0.4);
+            z-index: 1000;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(139, 69, 255, 0.6);
+        }
+        
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, #8b45ff 0%, #ff6b6b 100%);
+            z-index: 1001;
+            transition: width 0.1s;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 100px;
+            right: 30px;
+            background: linear-gradient(135deg, #8b45ff 0%, #ff6b6b 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(139, 69, 255, 0.4);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(180deg) scale(1.1);
+            box-shadow: 0 8px 25px rgba(139, 69, 255, 0.6);
+        }
 
         footer {
             background: #0f0f0f;
@@ -787,6 +1073,12 @@
     </style>
 </head>
 <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">🌓</div>
+    
     <header>
         <!-- Floating tech icons -->
         <div class="floating-icon icon-left-1">🔥</div>
@@ -847,6 +1139,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#interests">Interests</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
         </ul>
     </nav>
 
@@ -874,6 +1167,51 @@
 
         <section id="skills">
             <h2>Technical Skills</h2>
+            
+            <!-- Tech Stack Badges -->
+            <div class="tech-badges">
+                <div class="tech-badge">
+                    <span style="font-size: 1.5em;">🐍</span>
+                    <span>Python</span>
+                </div>
+                <div class="tech-badge">
+                    <span style="font-size: 1.5em;">☁️</span>
+                    <span>AWS</span>
+                </div>
+                <div class="tech-badge">
+                    <span style="font-size: 1.5em;">⚡</span>
+                    <span>Apache Spark</span>
+                </div>
+                <div class="tech-badge">
+                    <span style="font-size: 1.5em;">🔷</span>
+                    <span>Azure</span>
+                </div>
+                <div class="tech-badge">
+                    <span style="font-size: 1.5em;">🧱</span>
+                    <span>Databricks</span>
+                </div>
+                <div class="tech-badge">
+                    <span style="font-size: 1.5em;">❄️</span>
+                    <span>Snowflake</span>
+                </div>
+                <div class="tech-badge">
+                    <span style="font-size: 1.5em;">🗄️</span>
+                    <span>SQL</span>
+                </div>
+                <div class="tech-badge">
+                    <span style="font-size: 1.5em;">🐳</span>
+                    <span>Docker</span>
+                </div>
+                <div class="tech-badge">
+                    <span style="font-size: 1.5em;">🔄</span>
+                    <span>Airflow</span>
+                </div>
+                <div class="tech-badge">
+                    <span style="font-size: 1.5em;">🤖</span>
+                    <span>Machine Learning</span>
+                </div>
+            </div>
+            
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Data Engineering</h3>
@@ -954,6 +1292,12 @@
                     <div class="project-body">
                         <p>Built a real-time data streaming pipeline processing over 1M events per day using Kafka, Spark Streaming, and AWS infrastructure.</p>
                         <div class="impact-metrics">⚡ Impact: Reduced data latency from hours to seconds (99.5% improvement)</div>
+                        
+                        <!-- Project Demo/Screenshot Placeholder -->
+                        <div style="margin: 15px 0; padding: 60px 20px; background: linear-gradient(135deg, rgba(139, 69, 255, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%); border-radius: 8px; text-align: center; border: 2px dashed #2a2a2a;">
+                            <p style="color: #888; font-size: 0.9em;">📸 Add project screenshot or demo video here</p>
+                        </div>
+                        
                         <div class="tech-tags">
                             <span class="tech-tag">Kafka</span>
                             <span class="tech-tag">Spark Streaming</span>
@@ -975,6 +1319,12 @@
                     <div class="project-body">
                         <p>Developed a machine learning model to predict customer churn with 87% accuracy. Implemented feature engineering and model optimization techniques.</p>
                         <div class="impact-metrics">📈 Impact: 15% improvement in customer retention, £2M annual savings</div>
+                        
+                        <!-- Project Demo/Screenshot Placeholder -->
+                        <div style="margin: 15px 0; padding: 60px 20px; background: linear-gradient(135deg, rgba(139, 69, 255, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%); border-radius: 8px; text-align: center; border: 2px dashed #2a2a2a;">
+                            <p style="color: #888; font-size: 0.9em;">📸 Add project screenshot or demo video here</p>
+                        </div>
+                        
                         <div class="tech-tags">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Scikit-learn</span>
@@ -1093,6 +1443,50 @@
             </div>
         </section>
 
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        Outstanding data engineer who transformed our data infrastructure. Their expertise in Databricks and AWS reduced our processing time by 60%. A true professional who consistently delivers high-quality solutions.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SM</div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>Head of Engineering, Tech Company</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        Exceptional problem-solver with deep technical knowledge. Led our migration to cloud infrastructure seamlessly and mentored junior team members effectively. A valuable asset to any data team.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RJ</div>
+                        <div class="testimonial-info">
+                            <h4>Robert Johnson</h4>
+                            <p>CTO, Financial Services Firm</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        Brilliant data scientist who bridges the gap between engineering and analytics. Their ML models significantly improved our business outcomes and they explain complex concepts with remarkable clarity.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">EP</div>
+                        <div class="testimonial-info">
+                            <h4>Emma Patel</h4>
+                            <p>Director of Data Science, E-commerce</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="education">
             <h2>Education & Milestones</h2>
             <div class="education-item">
@@ -1134,7 +1528,7 @@
             </div>
         </section>
 
-        <section id="interests">
+        <section id="testimonials">
             <h2>Personal Interests</h2>
             <div class="interests-grid">
                 <div class="interest-card">
@@ -1183,6 +1577,9 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">↑</div>
+
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
@@ -1197,6 +1594,62 @@
                 }
             });
         });
+        
+        // Scroll Progress Indicator
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.pageYOffset / windowHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
+            
+            // Back to top button visibility
+            const backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        // Back to top button functionality
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Dark/Light Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        if (currentTheme === 'light') {
+            body.classList.add('light-mode');
+            themeToggle.textContent = '🌙';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            
+            // Update icon and save preference
+            if (body.classList.contains('light-mode')) {
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                themeToggle.textContent = '🌓';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+        
+        // Track page views (Custom analytics - you can also use Google Analytics above)
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                page_title: document.title,
+                page_location: window.location.href,
+                page_path: window.location.pathname
+            });
+        }
     </script>
 </body>
 </html>
