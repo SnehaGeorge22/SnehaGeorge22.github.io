@@ -1,173 +1,639 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Data Engineer & Data Scientist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <title>Sneha George Gnanakalavathy | Senior Data Engineer & Data Scientist | UK</title>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #0a0a0a;
+        }
 
-  <!-- SEO / ATS -->
-  <meta name="description" content="Senior Data Engineer with 7+ years experience. MSc Data Science (Distinction). AWS, Spark, ML, NLP, Healthcare analytics. UK-based.">
-  <meta name="keywords" content="Senior Data Engineer UK, Data Scientist UK, AWS, Spark, Kafka, Machine Learning, NLP">
-  <meta name="author" content="Sneha George Gnanakalavathy">
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-  <style>
-    :root {
-      --bg-main:#0d1117; --bg-card:#161b22; --bg-soft:#1f2937;
-      --text-main:#e6edf3; --text-muted:#9ca3af;
-      --accent:#8b5cf6; --border:#30363d;
-    }
-    [data-theme="light"] {
-      --bg-main:#f9fafb; --bg-card:#fff; --bg-soft:#f3f4f6;
-      --text-main:#111827; --text-muted:#4b5563;
-      --accent:#6366f1; --border:#e5e7eb;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:Segoe UI,Roboto;background:var(--bg-main);color:var(--text-main);line-height:1.6}
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 3px solid #00d4ff;
+        }
 
-    nav{position:sticky;top:0;background:var(--bg-card);border-bottom:1px solid var(--border);z-index:999}
-    .nav-container{max-width:1200px;margin:auto;display:flex;justify-content:space-between;padding:15px}
-    .nav-links a{margin-right:15px;color:var(--text-muted);text-decoration:none}
-    .nav-links a:hover{color:var(--accent)}
-    .toggle-btn{border:1px solid var(--border);background:var(--bg-soft);padding:6px 14px;border-radius:20px;cursor:pointer}
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
 
-    .container{max-width:1200px;margin:auto;padding:20px}
-    header,.section{background:var(--bg-card);padding:40px;margin-bottom:30px;border-radius:14px;border:1px solid var(--border)}
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #00d4ff;
+            object-fit: cover;
+            background-color: #2a2a3e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00d4ff;
+            font-size: 3em;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
 
-    .profile{display:flex;gap:30px;flex-wrap:wrap;align-items:center}
-    .profile img{width:160px;height:160px;border-radius:50%;border:3px solid var(--accent)}
-    h1{font-size:2.5em;color:var(--accent)}
-    h2{border-left:5px solid var(--accent);padding-left:15px;margin-bottom:20px}
-    p,li{color:var(--text-muted)}
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
 
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px}
-    .project-card{background:var(--bg-soft);padding:25px;border-radius:12px;border:1px solid var(--border)}
-    .project-card img{width:100%;border-radius:10px;margin-bottom:15px}
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #b0b0b0;
+        }
 
-    .tags span{background:var(--accent);color:#fff;padding:4px 10px;border-radius:12px;font-size:.8em;margin-right:5px}
-    .links a{color:var(--accent);margin-right:15px;text-decoration:none}
+        .contact-links {
+            margin-top: 20px;
+        }
 
-    footer{text-align:center;color:var(--text-muted);padding:40px}
-  </style>
+        .contact-links a {
+            color: #00d4ff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1em;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s;
+        }
+
+        .contact-links a:hover {
+            border-bottom: 2px solid #00d4ff;
+        }
+
+        nav {
+            background-color: #1a1a1a;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00d4ff;
+        }
+
+        section {
+            background: #161616;
+            margin: 40px 0;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            border: 1px solid #2a2a2a;
+        }
+
+        h2 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #00d4ff;
+            padding-bottom: 10px;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            color: #b0b0b0;
+            margin-bottom: 15px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .skill-category h3 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 5px 0;
+            color: #b0b0b0;
+        }
+
+        .skill-category li:before {
+            content: "▹ ";
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #2a2a2a;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+            border-color: #00d4ff;
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px;
+            border-bottom: 2px solid #00d4ff;
+        }
+
+        .project-header h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .project-type {
+            font-size: 0.9em;
+            color: #00d4ff;
+        }
+
+        .project-body {
+            padding: 20px;
+        }
+
+        .project-body p {
+            color: #b0b0b0;
+            margin-bottom: 15px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .tech-tag {
+            background: #00d4ff;
+            color: #0a0a0a;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .project-links {
+            margin-top: 15px;
+        }
+
+        .project-links a {
+            color: #00d4ff;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .experience-header h3 {
+            color: #e0e0e0;
+            font-size: 1.4em;
+        }
+
+        .experience-date {
+            color: #00d4ff;
+            font-weight: 500;
+        }
+
+        .experience-company {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .experience-description ul {
+            margin-left: 20px;
+            color: #b0b0b0;
+        }
+
+        .experience-description li {
+            margin-bottom: 8px;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .cert-card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .cert-card h3 {
+            color: #e0e0e0;
+            margin-bottom: 5px;
+        }
+
+        .cert-issuer {
+            color: #00d4ff;
+            font-weight: 500;
+        }
+
+        .cert-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        footer {
+            background: #0f0f0f;
+            color: #b0b0b0;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        footer p {
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+                font-size: 2.5em;
+            }
+        }
+
+        /* Photo upload instructions */
+        .photo-instructions {
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- Photo Placeholder: Replace 'your-photo.jpg' with your actual photo file -->
+                <img src="your-photo.jpg" alt="Your Name" class="profile-photo" 
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="profile-photo" style="display: none;">📷</div>
+                <div class="photo-instructions">Replace 'your-photo.jpg' with your photo</div>
+                
+                <div>
+                    <h1>Your Name</h1>
+                    <p>Data Engineer | Data Scientist</p>
+                    <p>MSc Data Science | 7+ Years Experience</p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com">Email</a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<nav>
-  <div class="nav-container">
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#de">Data Engineering</a>
-      <a href="#ds">Data Science</a>
-      <a href="#experience">Experience</a>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate Data Engineer and Data Scientist with over 7 years of experience building scalable data pipelines and deriving actionable insights from complex datasets. I recently completed my Masters in Data Science from a UK university, combining strong engineering fundamentals with advanced analytical capabilities.</p>
+                    <p>My expertise spans the full data lifecycle - from designing robust ETL/ELT architectures to implementing machine learning solutions in production. I thrive on solving challenging technical problems and delivering data solutions that drive business value.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Data Engineering</h3>
+                    <ul>
+                        <li>Apache Spark & PySpark</li>
+                        <li>Airflow & Databricks</li>
+                        <li>ETL/ELT Pipeline Design</li>
+                        <li>Data Warehousing</li>
+                        <li>Snowflake & Redshift</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud Platforms</h3>
+                    <ul>
+                        <li>AWS (S3, EMR, Glue, Lambda)</li>
+                        <li>Azure (Data Factory, Synapse)</li>
+                        <li>GCP (BigQuery, Dataflow)</li>
+                        <li>Terraform & CloudFormation</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming & Tools</h3>
+                    <ul>
+                        <li>Python (Pandas, NumPy)</li>
+                        <li>SQL (PostgreSQL, MySQL)</li>
+                        <li>Scala & Java</li>
+                        <li>Git & CI/CD</li>
+                        <li>Docker & Kubernetes</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Science & ML</h3>
+                    <ul>
+                        <li>Machine Learning (Scikit-learn)</li>
+                        <li>Deep Learning (TensorFlow, PyTorch)</li>
+                        <li>Statistical Analysis</li>
+                        <li>Data Visualization (Tableau, Power BI)</li>
+                        <li>MLOps & Model Deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Real-Time Streaming Pipeline</h3>
+                        <div class="project-type">Data Engineering</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Built a real-time data streaming pipeline processing over 1M events per day using Kafka, Spark Streaming, and AWS infrastructure. Reduced data latency from hours to seconds.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">Spark Streaming</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/project" target="_blank">GitHub</a>
+                            <a href="#" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Customer Churn Prediction</h3>
+                        <div class="project-type">Data Science</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Developed a machine learning model to predict customer churn with 87% accuracy. Implemented feature engineering and model optimization techniques resulting in 15% improvement in retention.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">XGBoost</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/project" target="_blank">GitHub</a>
+                            <a href="#" target="_blank">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Data Lake Architecture</h3>
+                        <div class="project-type">Data Engineering</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Designed and implemented a cloud-based data lake on AWS handling 500GB+ daily data ingestion. Architected medallion architecture with Bronze, Silver, and Gold layers.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">AWS S3</span>
+                            <span class="tech-tag">Databricks</span>
+                            <span class="tech-tag">Delta Lake</span>
+                            <span class="tech-tag">PySpark</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/project" target="_blank">GitHub</a>
+                            <a href="#" target="_blank">Architecture Diagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>NLP Sentiment Analysis</h3>
+                        <div class="project-type">Data Science</div>
+                    </div>
+                    <div class="project-body">
+                        <p>Created a sentiment analysis system for social media data using BERT transformers. Processed and analyzed 100K+ posts daily to extract business insights and trending topics.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Transformers</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/project" target="_blank">GitHub</a>
+                            <a href="#" target="_blank">Blog Post</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Senior Data Engineer</h3>
+                    <span class="experience-date">2020 - Present</span>
+                </div>
+                <div class="experience-company">Company Name, Location</div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Led the migration of legacy data warehouse to modern cloud-based lakehouse architecture using Databricks, reducing costs by 40%</li>
+                        <li>Designed and implemented 50+ data pipelines using Apache Airflow, processing 2TB+ data daily</li>
+                        <li>Mentored team of 3 junior engineers and established best practices for data engineering workflows</li>
+                        <li>Optimized SQL queries and Spark jobs, improving pipeline performance by 60%</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Data Engineer</h3>
+                    <span class="experience-date">2017 - 2020</span>
+                </div>
+                <div class="experience-company">Previous Company Name, Location</div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Developed ETL pipelines using Python and SQL to integrate data from 15+ sources into centralized data warehouse</li>
+                        <li>Implemented data quality frameworks and monitoring systems, reducing data errors by 75%</li>
+                        <li>Collaborated with data scientists to deploy ML models into production environments</li>
+                        <li>Built RESTful APIs for data access and created comprehensive documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <h3>Databricks Certified Data Engineer</h3>
+                    <div class="cert-issuer">Databricks</div>
+                    <div class="cert-date">2024</div>
+                </div>
+                <div class="cert-card">
+                    <h3>AWS Certified Solutions Architect</h3>
+                    <div class="cert-issuer">Amazon Web Services</div>
+                    <div class="cert-date">2023</div>
+                </div>
+                <div class="cert-card">
+                    <h3>Azure Data Engineer Associate</h3>
+                    <div class="cert-issuer">Microsoft</div>
+                    <div class="cert-date">2023</div>
+                </div>
+                <div class="cert-card">
+                    <h3>MSc Data Science</h3>
+                    <div class="cert-issuer">UK University Name</div>
+                    <div class="cert-date">2024</div>
+                </div>
+            </div>
+        </section>
     </div>
-    <button class="toggle-btn" onclick="toggleTheme()">🌙 / ☀️</button>
-  </div>
-</nav>
 
-<div class="container">
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p>Built with HTML & CSS</p>
+        </div>
+    </footer>
 
-<header id="about">
-  <div class="profile">
-    <img src="images/profile.jpg" alt="Sneha George">
-    <div>
-      <h1>Sneha George Gnanakalavathy</h1>
-      <p>Senior Data Engineer | AWS Certified | MSc Data Science (Distinction)</p>
-    </div>
-  </div>
-</header>
-
-<!-- ================= DATA SCIENCE PROJECTS ================= -->
-<section class="section" id="ds">
-  <h2>📊 Data Science & Machine Learning Projects</h2>
-
-  <div class="projects">
-
-    <!-- Capri-CT -->
-    <div class="project-card">
-      <img src="images/capri_ct_pipeline.png" alt="Capri-CT ML pipeline">
-
-      <h3>CAPRI-CT: Causal Deep Learning for CT Image Quality</h3>
-      <p>
-        Research-focused ML pipeline investigating causal relationships in CT image reconstruction
-        using Variational Autoencoders and ensemble modelling. Developed as part of MSc Data Science.
-      </p>
-
-      <ul>
-        <li>Designed end-to-end ML pipeline for medical imaging data</li>
-        <li>Implemented VAEs to analyse causal effects on image quality</li>
-        <li>Applied ensemble learning for robustness and validation</li>
-        <li>Aligned model outputs with clinical safety constraints</li>
-      </ul>
-
-      <div class="tags">
-        <span>Python</span><span>Deep Learning</span><span>TensorFlow</span><span>MLOps</span>
-      </div>
-
-      <div class="links">
-        <a href="https://github.com/your-username/capri-ct" target="_blank">GitHub</a>
-        <a href="https://arxiv.org/abs/2507.17420v1" target="_blank">Paper</a>
-      </div>
-    </div>
-
-    <!-- Game of Thrones -->
-    <div class="project-card">
-      <img src="images/got_network.png" alt="Game of Thrones network analysis">
-
-      <h3>Power Dynamics in Game of Thrones using NLP & Network Analysis</h3>
-      <p>
-        Analytical study of power evolution in <em>Game of Thrones</em> using character interaction
-        networks and sentiment analysis of dialogue, inspired by Foucault’s theory of power.
-      </p>
-
-      <ul>
-        <li>Built signed and conflict-based character networks</li>
-        <li>Performed sentiment analysis using VADER and manual annotation</li>
-        <li>Applied N-gram analysis to thematic phrases</li>
-        <li>Computed centrality metrics to quantify influence</li>
-        <li>Visualised networks using Gephi</li>
-      </ul>
-
-      <div class="tags">
-        <span>Python</span><span>NLP</span><span>Network Analysis</span><span>Data Visualisation</span>
-      </div>
-
-      <div class="links">
-        <a href="https://github.com/your-username/got-network-analysis" target="_blank">GitHub</a>
-        <a href="#" target="_blank">Report</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="section" id="experience">
-  <h2>💼 Professional Experience</h2>
-  <p><strong>Accenture (2017–2024)</strong> — Associate Manager, Data Engineering</p>
-  <ul>
-    <li>Reduced AWS infrastructure costs by 40%</li>
-    <li>Led migrations serving 250+ healthcare providers</li>
-    <li>Mentored junior engineers and reviewed architectures</li>
-  </ul>
-</section>
-
-</div>
-
-<footer>
-  © 2026 Sneha George Gnanakalavathy | UK
-</footer>
-
-<script>
-  const root = document.documentElement;
-  function toggleTheme(){
-    const t=root.getAttribute("data-theme")==="light"?"dark":"light";
-    root.setAttribute("data-theme",t);
-    localStorage.setItem("theme",t);
-  }
-  const saved=localStorage.getItem("theme");
-  if(saved)root.setAttribute("data-theme",saved);
-</script>
-
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
