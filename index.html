@@ -94,6 +94,18 @@
             animation-delay: 4s;
         }
         
+        .icon-left-4 {
+            top: 35%;
+            left: 3%;
+            animation-delay: 1.5s;
+        }
+        
+        .icon-left-5 {
+            top: 90%;
+            left: 7%;
+            animation-delay: 3.5s;
+        }
+        
         .icon-right-1 {
             top: 20%;
             right: 8%;
@@ -110,6 +122,18 @@
             top: 70%;
             right: 10%;
             animation-delay: 5s;
+        }
+        
+        .icon-right-4 {
+            top: 10%;
+            right: 4%;
+            animation-delay: 2.5s;
+        }
+        
+        .icon-right-5 {
+            top: 85%;
+            right: 12%;
+            animation-delay: 4.5s;
         }
         
         @keyframes float {
@@ -256,6 +280,14 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.5);
             border: 1px solid #2a2a2a;
+        }
+        
+        section:nth-child(odd) {
+            background: linear-gradient(135deg, rgba(139, 69, 255, 0.03) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        
+        section:nth-child(even) {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.03) 0%, rgba(0, 0, 0, 0) 100%);
         }
 
         h2 {
@@ -524,6 +556,155 @@
             font-size: 0.9em;
             margin-top: 5px;
         }
+        
+        .education-item {
+            background: #1a1a1a;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #8b45ff;
+            transition: all 0.3s;
+        }
+        
+        .education-item:hover {
+            border-left-color: #ff6b6b;
+            transform: translateX(5px);
+        }
+        
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .education-header h3 {
+            color: #e0e0e0;
+            font-size: 1.3em;
+        }
+        
+        .education-date {
+            color: #ff6b6b;
+            font-weight: 500;
+        }
+        
+        .education-institution {
+            color: #8b45ff;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .education-details {
+            color: #b0b0b0;
+            line-height: 1.8;
+        }
+        
+        .education-achievements {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #2a2a2a;
+        }
+        
+        .education-achievements ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .education-achievements li {
+            padding: 5px 0;
+            color: #b0b0b0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .education-achievements li:before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+        }
+        
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .interest-card {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #2a2a2a;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .interest-card:hover {
+            border-color: #8b45ff;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(139, 69, 255, 0.3);
+        }
+        
+        .interest-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .interest-card h3 {
+            color: #8b45ff;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .interest-card p {
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+        
+        .leadership-section {
+            background: linear-gradient(135deg, rgba(139, 69, 255, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 1px solid #8b45ff;
+        }
+        
+        .leadership-section h3 {
+            color: #8b45ff;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .leadership-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .leadership-item-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .leadership-item h4 {
+            color: #e0e0e0;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .leadership-item p {
+            color: #888;
+            font-size: 0.9em;
+        }
 
         footer {
             background: #0f0f0f;
@@ -566,6 +747,15 @@
             .floating-icon {
                 display: none;
             }
+            
+            .education-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Photo upload instructions */
@@ -583,9 +773,13 @@
         <div class="floating-icon icon-left-1">⚡</div>
         <div class="floating-icon icon-left-2">📊</div>
         <div class="floating-icon icon-left-3">🔧</div>
+        <div class="floating-icon icon-left-4">🎯</div>
+        <div class="floating-icon icon-left-5">📈</div>
         <div class="floating-icon icon-right-1">☁️</div>
         <div class="floating-icon icon-right-2">🤖</div>
         <div class="floating-icon icon-right-3">💾</div>
+        <div class="floating-icon icon-right-4">🚀</div>
+        <div class="floating-icon icon-right-5">💡</div>
         
         <div class="container">
             <div class="header-content">
@@ -629,9 +823,11 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#interests">Interests</a></li>
         </ul>
     </nav>
 
@@ -698,6 +894,32 @@
                         <li>Data Visualization (Tableau, Power BI)</li>
                         <li>MLOps & Model Deployment</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <h3>Databricks Certified Data Engineer</h3>
+                    <div class="cert-issuer">Databricks</div>
+                    <div class="cert-date">2024</div>
+                </div>
+                <div class="cert-card">
+                    <h3>AWS Certified Solutions Architect</h3>
+                    <div class="cert-issuer">Amazon Web Services</div>
+                    <div class="cert-date">2023</div>
+                </div>
+                <div class="cert-card">
+                    <h3>Azure Data Engineer Associate</h3>
+                    <div class="cert-issuer">Microsoft</div>
+                    <div class="cert-date">2023</div>
+                </div>
+                <div class="cert-card">
+                    <h3>MSc Data Science</h3>
+                    <div class="cert-issuer">UK University Name</div>
+                    <div class="cert-date">2024</div>
                 </div>
             </div>
         </section>
@@ -824,30 +1046,131 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="leadership-section">
+                <h3>Leadership & Impact</h3>
+                <div class="leadership-grid">
+                    <div class="leadership-item">
+                        <div class="leadership-item-icon">👥</div>
+                        <h4>Team Leadership</h4>
+                        <p>Mentored 3 junior engineers and led cross-functional teams of 5-8 members</p>
+                    </div>
+                    <div class="leadership-item">
+                        <div class="leadership-item-icon">🎯</div>
+                        <h4>Project Management</h4>
+                        <p>Successfully delivered 15+ major projects on time and within budget</p>
+                    </div>
+                    <div class="leadership-item">
+                        <div class="leadership-item-icon">💡</div>
+                        <h4>Innovation</h4>
+                        <p>Introduced best practices that increased team productivity by 40%</p>
+                    </div>
+                    <div class="leadership-item">
+                        <div class="leadership-item-icon">🗣️</div>
+                        <h4>Communication</h4>
+                        <p>Presented technical solutions to C-level executives and stakeholders</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <div class="certifications-grid">
-                <div class="cert-card">
-                    <h3>Databricks Certified Data Engineer</h3>
-                    <div class="cert-issuer">Databricks</div>
-                    <div class="cert-date">2024</div>
+        <section id="education">
+            <h2>Education & Milestones</h2>
+            <div class="education-item">
+                <div class="education-header">
+                    <h3>Master of Science (MSc) in Data Science</h3>
+                    <span class="education-date">2023 - 2024</span>
                 </div>
-                <div class="cert-card">
-                    <h3>AWS Certified Solutions Architect</h3>
-                    <div class="cert-issuer">Amazon Web Services</div>
-                    <div class="cert-date">2023</div>
+                <div class="education-institution">UK University Name</div>
+                <div class="education-details">
+                    <p>Specialized in Machine Learning, Big Data Analytics, and Statistical Modeling. Completed advanced coursework in Deep Learning, Natural Language Processing, and Cloud Computing.</p>
                 </div>
-                <div class="cert-card">
-                    <h3>Azure Data Engineer Associate</h3>
-                    <div class="cert-issuer">Microsoft</div>
-                    <div class="cert-date">2023</div>
+                <div class="education-achievements">
+                    <strong style="color: #8b45ff;">Key Achievements:</strong>
+                    <ul>
+                        <li>Graduated with Distinction (Merit/Distinction - adjust as needed)</li>
+                        <li>Dissertation: "Scalable ML Pipeline Architecture for Real-Time Predictions"</li>
+                        <li>Led study group of 8 students for advanced statistics coursework</li>
+                    </ul>
                 </div>
-                <div class="cert-card">
-                    <h3>MSc Data Science</h3>
-                    <div class="cert-issuer">UK University Name</div>
-                    <div class="cert-date">2024</div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <h3>Bachelor of Technology/Engineering (Adjust as needed)</h3>
+                    <span class="education-date">2010 - 2014</span>
+                </div>
+                <div class="education-institution">University Name, Country</div>
+                <div class="education-details">
+                    <p>Foundation in Computer Science and Engineering principles. Strong focus on algorithms, data structures, and software engineering.</p>
+                </div>
+                <div class="education-achievements">
+                    <strong style="color: #8b45ff;">Key Achievements:</strong>
+                    <ul>
+                        <li>First Class Honours / GPA 3.8/4.0 (adjust as needed)</li>
+                        <li>President of Computer Science Society (2013-2014)</li>
+                        <li>Winner of University Hackathon - Built predictive analytics dashboard</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="leadership-section">
+                <h3>Leadership & Impact</h3>
+                <div class="leadership-grid">
+                    <div class="leadership-item">
+                        <div class="leadership-item-icon">👥</div>
+                        <h4>Team Leadership</h4>
+                        <p>Mentored 3 junior engineers and led cross-functional teams of 5-8 members</p>
+                    </div>
+                    <div class="leadership-item">
+                        <div class="leadership-item-icon">🎯</div>
+                        <h4>Project Management</h4>
+                        <p>Successfully delivered 15+ major projects on time and within budget</p>
+                    </div>
+                    <div class="leadership-item">
+                        <div class="leadership-item-icon">💡</div>
+                        <h4>Innovation</h4>
+                        <p>Introduced best practices that increased team productivity by 40%</p>
+                    </div>
+                    <div class="leadership-item">
+                        <div class="leadership-item-icon">🗣️</div>
+                        <h4>Communication</h4>
+                        <p>Presented technical solutions to C-level executives and stakeholders</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests">
+            <h2>Personal Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <span class="interest-icon">📸</span>
+                    <h3>Photography</h3>
+                    <p>Passionate about landscape and street photography. I enjoy capturing moments during my travels and experimenting with different techniques. Photography helps me develop my eye for detail and composition.</p>
+                    <div style="margin-top: 15px;">
+                        <a href="https://instagram.com/yourphotographypage" target="_blank" style="color: #ff6b6b; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">
+                            📷 View My Photography →
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="interest-card">
+                    <span class="interest-icon">✈️</span>
+                    <h3>Travel & Culture</h3>
+                    <p>Explored 15+ countries across Europe and Asia. Travel broadens my perspective and helps me understand diverse cultures. I love discovering local cuisines and historical sites wherever I go.</p>
+                </div>
+                
+                <div class="interest-card">
+                    <span class="interest-icon">📚</span>
+                    <h3>Continuous Learning</h3>
+                    <p>Regular reader of tech blogs and research papers on AI/ML. Active participant in online courses and tech communities. Always exploring emerging technologies and industry trends.</p>
+                </div>
+                
+                <div class="interest-card">
+                    <span class="interest-icon">🏃</span>
+                    <h3>Fitness & Wellbeing</h3>
+                    <p>Regular runner and gym enthusiast. Completed 2 half-marathons. I believe maintaining physical fitness enhances mental clarity and productivity in my professional work.</p>
                 </div>
             </div>
         </section>
@@ -855,8 +1178,15 @@
 
     <footer>
         <div class="container">
+            <p style="font-size: 1.1em; color: #e0e0e0; margin-bottom: 15px;">Let's Connect!</p>
+            <div style="display: flex; justify-content: center; gap: 25px; margin: 20px 0; flex-wrap: wrap;">
+                <a href="mailto:your.email@example.com" style="color: #8b45ff; text-decoration: none; transition: color 0.3s;">📧 Email</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: #8b45ff; text-decoration: none; transition: color 0.3s;">💼 LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank" style="color: #8b45ff; text-decoration: none; transition: color 0.3s;">💻 GitHub</a>
+                <a href="https://instagram.com/yourphotographypage" target="_blank" style="color: #8b45ff; text-decoration: none; transition: color 0.3s;">📷 Instagram</a>
+            </div>
             <p>&copy; 2025 Your Name. All rights reserved.</p>
-            <p>Built with HTML & CSS</p>
+            <p>Built with HTML & CSS | Portfolio v1.0</p>
         </div>
     </footer>
 
